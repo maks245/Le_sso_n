@@ -22,6 +22,7 @@ public class Triangle extends Figure{
 
     }
 
+
     @Override
     public double calculateSquare() {
         if (height != 0) {
