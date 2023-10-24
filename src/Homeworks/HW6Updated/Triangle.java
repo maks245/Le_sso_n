@@ -34,20 +34,20 @@ public class Triangle extends Figure{
         }
     }
 
-    public double calculateSquare(int side1, int side2, int side3){
+    private double calculateSquare(int side1, int side2, int side3){
         double halfOfPerimeter =( (double) side1 + side2 + side3)/2;
         double result = Math.sqrt(halfOfPerimeter * (halfOfPerimeter - side1) * (halfOfPerimeter - side2) * (halfOfPerimeter - side3));
         return result;
     }
 
-    public double calculateSquare(int side1, int side2, double corner){
+    private double calculateSquare(int side1, int side2, double corner){
 
         double result = ((double) side1 * side2)/2 * Math.sin(corner);
         return result;
     }
 
 
-    public double calculateSquare(int side1, int height){
+    private double calculateSquare(int side1, int height){
         double result = 0;
         if(height != 0) {
             result = ((double) side1 / 2 * height);
