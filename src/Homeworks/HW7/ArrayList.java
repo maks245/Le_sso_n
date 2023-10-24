@@ -18,9 +18,9 @@ public class ArrayList {
             return size;
         }
 
-        public int indexOf(int element) {
+        public int indexOf(int number) {
             for (int i = 0; i < size; i++) {
-                if (array[i] == element) {
+                if (array[i] == number) {
                     return i;
                 }
             }
@@ -36,7 +36,7 @@ public class ArrayList {
         }
 
         public boolean add(int number) {
-            ensureCapacity(size + 1);
+            increaseCapacity(size + 1);
             array[size] = number;
             size++;
             return true;
@@ -46,7 +46,7 @@ public class ArrayList {
             if (index < 0 || index > size) {
                 return false;
             }
-            ensureCapacity(size + 1);
+            increaseCapacity(size + 1);
             for (int i = size; i > index; i--) {
                 array[i] = array[i - 1];
             }
@@ -74,7 +74,7 @@ public class ArrayList {
             return array[index];
         }
 
-        private void ensureCapacity(int minCapacity) {
+        private void increaseCapacity(int minCapacity) {
             if (minCapacity > array.length) {
                 int newCapacity = Math.max(array.length * 2, minCapacity);
                 int[] newArray = new int[newCapacity];
