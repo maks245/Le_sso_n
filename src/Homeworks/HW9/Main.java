@@ -25,7 +25,7 @@ public class Main {
                 System.out.println("Error: " + e.getMessage());
             } catch (java.util.InputMismatchException e) {
                 System.out.println("Error: Please enter a valid numeric value.");
-                scanner.nextLine(); // Clear the input buffer.
+                scanner.nextLine();
             }
         }
     }
